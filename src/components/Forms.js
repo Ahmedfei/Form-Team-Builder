@@ -1,4 +1,6 @@
 import React, {useState} from "react"
+import { Button } from 'semantic-ui-react'
+import "../index.css"
 
 export default function Forms(props) {
     const [form, setForm] = useState({
@@ -24,6 +26,9 @@ props.addnew(form)
 console.log("props", props)
 
 return(
+    <div className="ui form">
+  <div className="three fields">
+    <div className="field">
 <form onSubmit= {handleSubmit}>
 <label>name</label>
 
@@ -47,12 +52,19 @@ onChange={handleChange}
 onChange={handleChange}
  />
 
-<button type="submit"> add new member</button>
+
+
+<Button inverted color='olive'>
+        add new member
+      </Button>
 
 
 
     
 </form>
+</div>
+</div>
+</div>
 
 );
 }
